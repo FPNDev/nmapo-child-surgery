@@ -1,0 +1,42 @@
+@r: ~'.p-page';
+
+@{r}--layout-sb {
+  display: flex;
+  position: relative;
+
+  @{r}-sidebar {
+    background: @main-color-light;
+    box-shadow: 0 0 @secondary-grid * 5 0 @black-a05;
+    max-width: @main-grid * 10;
+    min-width: @main-grid * 10;
+    margin: 0 0 0 -@main-grid * 10;
+    transform: translateX(@main-grid * 10);
+    z-index: 0;
+  }
+
+  @{r}-sidebar {
+    user-select: none;
+
+    @{r}-title {
+      position: absolute;
+      top: @main-grid * 3;
+      left: 50%;
+      font-size: @secondary-grid * 3.5;
+      color: @black-a90;
+      font-weight: 500;
+      letter-spacing: @secondary-grid;
+      text-transform: uppercase;
+
+      span {
+        display: inline-block;
+        transform: rotate(90deg);
+        transform-origin: left center;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  @{r}-content {
+    flex-grow: 1;
+  }
+}
