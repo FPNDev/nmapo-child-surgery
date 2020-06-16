@@ -40,3 +40,36 @@
     flex-grow: 1;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  @{r}--layout-sb {
+    display: block;
+
+    @{r}-sidebar {
+      padding: @main-grid * 2 0;
+      max-width: unset;
+      min-width: unset;
+      min-height: @main-grid * 10;
+      margin: 0;
+      transform: none;
+    }
+
+    @{r}-sidebar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-left: @main-grid;
+      padding-right: @main-grid;
+
+      @{r}-title {
+        position: static;
+
+        span {
+          transform: none;
+          white-space: unset;
+        }
+      }
+    }
+  }
+}

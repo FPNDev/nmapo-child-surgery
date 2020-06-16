@@ -181,3 +181,54 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .p-page {
+    &--general {
+      .p-page-content {
+        padding: @main-grid * 4 @main-grid;
+      }
+    }
+
+    .p-col {
+      display: inline-block;
+      width: 100%;
+      column-gap: @main-grid;
+      overflow: hidden;
+
+      &-2,
+      &-3 {
+        columns: 1;
+      }
+    }
+
+    .p-w {
+      &--30,
+      &--50,
+      &--75 {
+        width: 100%;
+      }
+    }
+
+    .p-image {
+      float: none !important;
+      margin: 0 0 @main-grid * 3 0 !important;
+
+      width: 100%;
+    }
+
+    .p-attachment {
+      display: block;
+      margin: @main-grid 0 0;
+
+      &__type {
+        position: relative;
+
+        &:before {
+          transform: none;
+          top: 0;
+        }
+      }
+    }
+  }
+}
