@@ -10,6 +10,8 @@
 
 /** COMPONENTS */
 
+@import "components/_link";
+@import "components/_heading";
 @import 'components/_grid';
 @import 'components/_tooltip';
 @import 'components/_tile';
@@ -18,3 +20,15 @@
 
 @import 'page/_general';
 @import 'page/_layout-sb';
+
+/** MEDIA */
+
+._onlymobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  ._onlymobile {
+    display: block;
+  }
+}

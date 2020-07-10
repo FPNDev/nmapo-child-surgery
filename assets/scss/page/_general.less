@@ -186,7 +186,7 @@
   .p-page {
     &--general {
       .p-page-content {
-        padding: @main-grid * 4 @main-grid;
+        padding: @main-grid * 2 @main-grid @main-grid * 4;
       }
     }
 
@@ -210,11 +210,21 @@
       }
     }
 
+    .p-paragraph {
+      display: flex;
+      flex-direction: column;
+
+      *:not(.p-image) {
+        order: 0;
+      }
+    }
+
     .p-image {
       float: none !important;
-      margin: 0 0 @main-grid * 3 0 !important;
+      margin: @main-grid * 2 0 @main-grid 0 !important;
 
       width: 100%;
+      order: 1;
     }
 
     .p-attachment {
