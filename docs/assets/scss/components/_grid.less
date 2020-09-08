@@ -1,0 +1,12 @@
+.c-container {
+  width: 100%;
+  max-width: @container-width;
+  margin: 0 auto;
+  padding: 0 @main-grid;
+}
+
+@media screen and (max-width: 1000px) {
+  .c-container {
+    padding: 0 @main-grid * 1.5;
+  }
+}
