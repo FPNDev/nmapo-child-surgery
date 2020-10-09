@@ -1,0 +1,15 @@
+.c-toolwindow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: none;
+  animation: fadeIn 100ms ease-in-out;
+
+  padding: @secondary-grid * 4 0 0;
+
+  &--parent:hover & {
+    display: block;
+  }
+}
